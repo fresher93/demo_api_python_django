@@ -3,7 +3,7 @@ from utils import response_json
 from . import contants
 
 
-def requesters_search(obj_data_input):
+def regist_requesters(obj_data_input):
     connection = None
     cursor = None
     response = response_json.get_response_common(None, None)
@@ -11,7 +11,7 @@ def requesters_search(obj_data_input):
         connection = mysql_connection.get_connection_info()
         cursor = connection.cursor()
 
-        sql_search_exist = f"SELECT count(1) as cnt FROM requesters WHERE user_name={obj_data_input['user_name']}"
+        sql_search_exist = f"SELECT * FROM requesters WHERE user_name=\"{obj_data_input['user_name']}\" "
 
         cursor.execute(sql_search_exist)
 
@@ -27,7 +27,7 @@ def requesters_search(obj_data_input):
             response['code'] = 0
 
     except Exception as e:
-        print('regist.models -> requesters_search -> ex: ', e)
+        print('regist.models -> regist_requesters -> ex: ', e)
 
     finally:
         if connection is not None:
