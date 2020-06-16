@@ -1,0 +1,9 @@
+.DS_Store
+venv/
+dist/
+.idea/
+__pycache__/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
