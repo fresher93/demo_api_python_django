@@ -2,7 +2,7 @@
 # setup: pip install -r requirements.txt
 # run: python manage.py runserver
 # ----------------------------------------------
-django==3.0.4
+django==3.0.7
 djangorestframework==3.11.0
 django-cors-headers==3.2.1
 PyMySQL==0.9.3
