@@ -23,7 +23,7 @@ def requesters_search(obj_input_data):
                 sql_search += f" AND device=\"{obj_input_data['search_data']}\" "
 
             elif obj_input_data['search_type'] == 3:
-                sql_search += f" AND anme=\"{obj_input_data['search_data']}\" "
+                sql_search += f" AND name=\"{obj_input_data['search_data']}\" "
             
             cursor.execute(sql_search)
 
@@ -60,13 +60,13 @@ def technicals_search(obj_input_data):
 
         else:
             if obj_input_data['search_type'] == 1:
-                sql_search += f" AND request_date=\"{obj_input_data['search_data']}\" " 
+                sql_search += f" AND request_date=\"{obj_input_data['search_data']}\" "
 
             elif obj_input_data['search_type'] == 2:
                 sql_search += f" AND device=\"{obj_input_data['search_data']}\" "
 
             elif obj_input_data['search_type'] == 3:
-                sql_search += f" AND anme=\"{obj_input_data['search_data']}\" "
+                sql_search += f" AND name=\"{obj_input_data['search_data']}\" "
             
             cursor.execute(sql_search)
 
